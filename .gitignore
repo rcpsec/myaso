@@ -1,0 +1,36 @@
+## MAC OS
+.DS_Store
+
+## TEXTMATE
+*.tmproj
+tmtags
+
+## EMACS
+*~
+\#*
+.\#*
+
+## VIM
+*.swp
+
+## NETBEANS
+nbproject
+
+## REDCAR
+.redcar
+
+## RVM
+.rvmrc
+
+## PROJECT::GENERAL
+coverage
+doc
+rdoc
+.yardoc
+pkg
+wiki
+
+## PROJECT::SPECIFIC
+*.tch
+*.mrd
+*.tab
