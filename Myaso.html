@@ -78,9 +78,7 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/myaso/cli.rb<span class="defines">,<br />
-  lib/myaso.rb,<br /> lib/myaso/converter.rb</span>
-</dd>
+    <dd class="r1 last">lib/myaso.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -88,7 +86,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     <p>
-encoding: utf-8
+Myaso: The Morphological Analyzer.
 </p>
 
 
@@ -100,11 +98,11 @@ encoding: utf-8
 <p class="children">
    
     
-      <strong class="modules">Modules:</strong> <a href="Myaso/Inflector.html" title="Myaso::Inflector (module)">Inflector</a>
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Myaso/Inflector.html" title="Myaso::Inflector (module)">Inflector</a></span>, <span class='object_link'><a href="Myaso/Model.html" title="Myaso::Model (module)">Model</a></span>
     
    
     
-      <strong class="classes">Classes:</strong> <a href="Myaso/CLI.html" title="Myaso::CLI (class)">CLI</a>, <a href="Myaso/Converter.html" title="Myaso::Converter (class)">Converter</a>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Myaso/CLI.html" title="Myaso::CLI (class)">CLI</a></span>, <span class='object_link'><a href="Myaso/Converter.html" title="Myaso::Converter (class)">Converter</a></span>
     
   
 </p>
@@ -137,7 +135,7 @@ encoding: utf-8
 
   
     <span class="summary_desc"><div class='inline'><p>
-Return the root path of the <tt>Myaso</tt> gem.
+Root path of the Myaso gem.
 </p>
 </div></span>
   
@@ -161,8 +159,7 @@ Return the root path of the <tt>Myaso</tt> gem.
 
   
     <span class="summary_desc"><div class='inline'><p>
-Return the <tt>Myaso</tt> version according to jeweler-defined
-<tt>VERSION</tt> file.
+Myaso gem version according to jeweler-defined VERSION file.
 </p>
 </div></span>
   
@@ -189,8 +186,15 @@ Return the <tt>Myaso</tt> version according to jeweler-defined
 </p><div class="docstring">
   <div class="discussion">
     <p>
-Return the root path of the <tt>Myaso</tt> gem.
+Root path of the Myaso gem.
 </p>
+<h4>Returns</h4>
+<table>
+<tr><td valign="top">String</td><td><p>
+Myaso root path.
+</p>
+</td></tr>
+</table>
 
 
   </div>
@@ -203,15 +207,15 @@ Return the root path of the <tt>Myaso</tt> gem.
       <pre class="lines">
 
 
-13
-14
-15</pre>
+18
+19
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/myaso.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/myaso.rb', line 18</span>
 
 <span class='def def kw'>def</span> <span class='root identifier id'>root</span>
-  <span class='@myaso_root ivar id'>@myaso_root</span> <span class='opasgn op'>||=</span> <span class='File constant id'>File</span><span class='dot token'>.</span><span class='expand_path identifier id'>expand_path</span><span class='lparen token'>(</span><span class='string val'>'../../'</span><span class='comma token'>,</span> <span class='__FILE__ __file__ kw'>__FILE__</span><span class='rparen token'>)</span>
+  <span class='@@myaso_root ivar id'>@@myaso_root</span> <span class='opasgn op'>||=</span> <span class='File constant id'>File</span><span class='dot token'>.</span><span class='expand_path identifier id'>expand_path</span><span class='lparen token'>(</span><span class='string val'>'../../'</span><span class='comma token'>,</span> <span class='__FILE__ __file__ kw'>__FILE__</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -229,9 +233,15 @@ Return the root path of the <tt>Myaso</tt> gem.
 </p><div class="docstring">
   <div class="discussion">
     <p>
-Return the <tt>Myaso</tt> version according to jeweler-defined
-<tt>VERSION</tt> file.
+Myaso gem version according to jeweler-defined VERSION file.
 </p>
+<h4>Returns</h4>
+<table>
+<tr><td valign="top">String</td><td><p>
+Myaso semantic version.
+</p>
+</td></tr>
+</table>
 
 
   </div>
@@ -244,15 +254,15 @@ Return the <tt>Myaso</tt> version according to jeweler-defined
       <pre class="lines">
 
 
-19
-20
-21</pre>
+28
+29
+30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/myaso.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/myaso.rb', line 28</span>
 
 <span class='def def kw'>def</span> <span class='version identifier id'>version</span>
-  <span class='@version ivar id'>@version</span> <span class='opasgn op'>||=</span> <span class='File constant id'>File</span><span class='dot token'>.</span><span class='read identifier id'>read</span><span class='lparen token'>(</span><span class='File constant id'>File</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='Myaso constant id'>Myaso</span><span class='dot token'>.</span><span class='root identifier id'>root</span><span class='comma token'>,</span> <span class='string val'>'VERSION'</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='chomp identifier id'>chomp</span>
+  <span class='@@version ivar id'>@@version</span> <span class='opasgn op'>||=</span> <span class='File constant id'>File</span><span class='dot token'>.</span><span class='read identifier id'>read</span><span class='lparen token'>(</span><span class='File constant id'>File</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='Myaso constant id'>Myaso</span><span class='dot token'>.</span><span class='root identifier id'>root</span><span class='comma token'>,</span> <span class='string val'>'VERSION'</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='chomp identifier id'>chomp</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -265,9 +275,9 @@ Return the <tt>Myaso</tt> version according to jeweler-defined
 </div>
     
     <div id="footer">
-  Generated on Mon Aug 23 03:00:02 2010 by 
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
-  0.5.8 (ruby-1.8.7).
+  Generated on Mon Sep 27 05:53:34 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.1 (ruby-1.8.7).
 </div>
 
   </body>
