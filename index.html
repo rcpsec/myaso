@@ -58,7 +58,7 @@ so let fix this dirty mistake.</p>
 
 <ul>
 <li>Command-Line Interface based on Thor.</li>
-<li>TokyoCabinet Hash storage.</li>
+<li>SQLite3 relational database storage with Sequel ORM.</li>
 <li>Grammatic Information converter.</li>
 <li>Morphology Dictonaries converter.</li>
 <li>(TODO) Preanalysis dictionary processing.</li>
@@ -77,11 +77,11 @@ basic help messages on myaso:</p>
 
 <pre class="code"><span class='string val'>% ./myaso </span><span class='help identifier id'>help</span>
 <span class='Tasks constant id'>Tasks</span><span class='colon op'>:</span>
-  <span class='dot token'>.</span><span class='div op'>/</span><span class='myaso identifier id'>myaso</span> <span class='convert identifier id'>convert</span> <span class='TCH_PATH constant id'>TCH_PATH</span> <span class='MORPHS constant id'>MORPHS</span> <span class='GRAMTAB constant id'>GRAMTAB</span> <span class='minus op'>-</span><span class='minus op'>-</span><span class='encoding identifier id'>encoding</span><span class='assign token'>=</span><span class='ENCODING constant id'>ENCODING</span>  <span class='comment val'># Conv...</span>
-  <span class='dot token'>.</span><span class='div op'>/</span><span class='myaso identifier id'>myaso</span> <span class='help identifier id'>help</span> <span class='lbrack token'>[</span><span class='TASK constant id'>TASK</span><span class='rbrack token'>]</span>                                          <span class='comment val'># Desc...</span>
-  <span class='dot token'>.</span><span class='div op'>/</span><span class='myaso identifier id'>myaso</span> <span class='version identifier id'>version</span>                                              <span class='comment val'># Prin...</span>
-<span class='string val'>% myaso </span><span class='minus op'>-</span><span class='v identifier id'>v</span>
-<span class='myaso identifier id'>myaso</span> <span class='version identifier id'>version</span> <span class='integer val'>0</span><span class='float val'>.0.0</span>
+  <span class='myaso identifier id'>myaso</span> <span class='convert identifier id'>convert</span> <span class='STORAGE_PATH constant id'>STORAGE_PATH</span> <span class='MORPHS constant id'>MORPHS</span> <span class='GRAMTAB constant id'>GRAMTAB</span> <span class='minus op'>-</span><span class='minus op'>-</span><span class='encoding identifier id'>encoding</span><span class='assign token'>=</span><span class='ENCODING constant id'>ENCODING</span>  <span class='comment val'># Conv...</span>
+  <span class='myaso identifier id'>myaso</span> <span class='help identifier id'>help</span> <span class='lbrack token'>[</span><span class='TASK constant id'>TASK</span><span class='rbrack token'>]</span>                                              <span class='comment val'># Desc...</span>
+  <span class='myaso identifier id'>myaso</span> <span class='version identifier id'>version</span>                                                  <span class='comment val'># Prin...</span>
+<span class='string val'>% ./myaso </span><span class='minus op'>-</span><span class='v identifier id'>v</span>
+<span class='myaso identifier id'>myaso</span> <span class='version identifier id'>version</span> <span class='integer val'>0</span><span class='float val'>.0.1</span>
 </pre>
 
 <p>Very useful, isn't it? :3</p>
@@ -90,7 +90,7 @@ basic help messages on myaso:</p>
 
 <p>Tasty myaso supports only databases from awesome
 <a href="http://aot.ru/">aot.ru</a> website. First, you should convert
-aot`s dictionaries to myaso-usable format (TokyoCabinet Hash).</p>
+aot`s dictionaries to myaso-usable format (SQLite3).</p>
 
 <p>When you <a href="http://wiki.github.com/eveel/myaso/dictonaries-from-aotru">download</a>
 these dictonaries, just run myaso converter.</p>
@@ -106,7 +106,7 @@ these dictonaries, just run myaso converter.</p>
 
 <p>So run myaso like this and enjoy the resulting <em>test.tch</em> hash:</p>
 
-<pre class="code"><span class='myaso identifier id'>myaso</span> <span class='convert identifier id'>convert</span> <span class='string val'>'russian.tch'</span> \
+<pre class="code"><span class='myaso identifier id'>myaso</span> <span class='convert identifier id'>convert</span> <span class='string val'>'myaso.ru.sqlite3'</span> \
     <span class='string val'>'share/RusSrc/morphs.mrd'</span> \
     <span class='string val'>'share/rgramtab.tab'</span> \
     <span class='minus op'>-</span><span class='minus op'>-</span><span class='encoding identifier id'>encoding</span><span class='assign token'>=</span><span class='cp1251 identifier id'>cp1251</span>
@@ -130,7 +130,7 @@ future version unintentionally.</li>
 <p>Copyright (c) 2010 Dmitry A. Ustalov. See LICENSE for details.</p></div></div>
     
     <div id="footer">
-  Generated on Mon Sep 27 05:53:34 2010 by 
+  Generated on Mon Sep 27 06:00:34 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>
