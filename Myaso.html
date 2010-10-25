@@ -78,7 +78,9 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/myaso.rb</dd>
+    <dd class="r1 last">lib/myaso.rb<span class="defines">,<br />
+  lib/myaso/version.rb</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
@@ -102,7 +104,7 @@ Myaso: The Morphological Analyzer.
     
    
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Myaso/CLI.html" title="Myaso::CLI (class)">CLI</a></span>, <span class='object_link'><a href="Myaso/Converter.html" title="Myaso::Converter (class)">Converter</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Myaso/CLI.html" title="Myaso::CLI (class)">CLI</a></span>, <span class='object_link'><a href="Myaso/Converter.html" title="Myaso::Converter (class)">Converter</a></span>, <span class='object_link'><a href="Myaso/Store.html" title="Myaso::Store (class)">Store</a></span>, <span class='object_link'><a href="Myaso/Version.html" title="Myaso::Version (class)">Version</a></span>
     
   
 </p>
@@ -110,172 +112,13 @@ Myaso: The Morphological Analyzer.
 
   
 
-  
-    <h2>
-      Class Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#root-class_method" title="root (class method)">+ (Object) <strong>root</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Root path of the Myaso gem.
-</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#version-class_method" title="version (class method)">+ (Object) <strong>version</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-Myaso gem version according to jeweler-defined VERSION file.
-</p>
-</div></span>
-  
-</li>
-
-      
-    </ul>
-  
-
-
-  
-
-  <div id="class_method_details" class="method_details_list">
-    <h2>Class Method Details</h2>
-    
-    
-      <div class="method_details first">
-  <p class="signature first" id="root-class_method">
-  
-    + (<tt>Object</tt>) <strong>root</strong> 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Root path of the Myaso gem.
-</p>
-<h4>Returns</h4>
-<table>
-<tr><td valign="top">String</td><td><p>
-Myaso root path.
-</p>
-</td></tr>
-</table>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-18
-19
-20</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/myaso.rb', line 18</span>
-
-<span class='def def kw'>def</span> <span class='root identifier id'>root</span>
-  <span class='@@myaso_root ivar id'>@@myaso_root</span> <span class='opasgn op'>||=</span> <span class='File constant id'>File</span><span class='dot token'>.</span><span class='expand_path identifier id'>expand_path</span><span class='lparen token'>(</span><span class='string val'>'../../'</span><span class='comma token'>,</span> <span class='__FILE__ __file__ kw'>__FILE__</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
-</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <p class="signature " id="version-class_method">
-  
-    + (<tt>Object</tt>) <strong>version</strong> 
-  
-
-  
-</p><div class="docstring">
-  <div class="discussion">
-    <p>
-Myaso gem version according to jeweler-defined VERSION file.
-</p>
-<h4>Returns</h4>
-<table>
-<tr><td valign="top">String</td><td><p>
-Myaso semantic version.
-</p>
-</td></tr>
-</table>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-28
-29
-30</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/myaso.rb', line 28</span>
-
-<span class='def def kw'>def</span> <span class='version identifier id'>version</span>
-  <span class='@@version ivar id'>@@version</span> <span class='opasgn op'>||=</span> <span class='File constant id'>File</span><span class='dot token'>.</span><span class='read identifier id'>read</span><span class='lparen token'>(</span><span class='File constant id'>File</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='Myaso constant id'>Myaso</span><span class='dot token'>.</span><span class='root identifier id'>root</span><span class='comma token'>,</span> <span class='string val'>'VERSION'</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='chomp identifier id'>chomp</span>
-<span class='end end kw'>end</span>
-</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
 
 </div>
     
     <div id="footer">
-  Generated on Mon Sep 27 06:00:35 2010 by 
+  Generated on Mon Oct 25 07:52:06 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>

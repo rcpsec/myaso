@@ -52,17 +52,28 @@ Mikhail Korobov. Seriously, pymorphy is a great software written in
 <a href="http://python.org/">ugly</a> programming language,
 so let fix this dirty mistake.</p>
 
-<p>As usual, myaso is <a href="http://suckless.ru/">Suckless</a>.</p>
+<p>As usual, myaso is <a href="http://suckless.ru/">Suckless</a>. Stupid pussies and
+tolerance-faggots are not welcome, thanks.</p>
 
-<h2>Feature List (read as «To-Do List», please)</h2>
+<h2>Feature List</h2>
 
 <ul>
-<li>Command-Line Interface based on Thor.</li>
-<li>SQLite3 relational database storage with Sequel ORM.</li>
-<li>Grammatic Information converter.</li>
-<li>Morphology Dictonaries converter.</li>
-<li>(TODO) Preanalysis dictionary processing.</li>
-<li>(TODO) Normalizer, Inflector and Pluralizer modules.</li>
+<li><a href="http://github.com/carlhuda/thor">Thor</a>-based command-line
+interface.</li>
+<li>Ability to start the Myaso IRB session to work with
+morphological information over our awesome objects.</li>
+<li>Grammatic databases converter (*.tab files).</li>
+<li>Morphology databases converter (*.mrd files).</li>
+<li>TokyoCabinet storage with <a href="http://github.com/eveel/moneta">Moneta</a>
+middleware.</li>
+</ul>
+
+
+<h3>To-Do List</h3>
+
+<ul>
+<li>Preanalysis dictionary processor.</li>
+<li>Normalizer, Inflector and Pluralizer modules.</li>
 </ul>
 
 
@@ -72,14 +83,14 @@ so let fix this dirty mistake.</p>
 
 <h3>Help viewing</h3>
 
-<p>Yeah! Thanks to <a href="http://github.com/wycats/thor">thor</a>, you can view
-basic help messages on myaso:</p>
+<p>Yeah! You can view basic help messages on myaso:</p>
 
 <pre class="code"><span class='string val'>% ./myaso </span><span class='help identifier id'>help</span>
 <span class='Tasks constant id'>Tasks</span><span class='colon op'>:</span>
-  <span class='myaso identifier id'>myaso</span> <span class='convert identifier id'>convert</span> <span class='STORAGE_PATH constant id'>STORAGE_PATH</span> <span class='MORPHS constant id'>MORPHS</span> <span class='GRAMTAB constant id'>GRAMTAB</span> <span class='minus op'>-</span><span class='minus op'>-</span><span class='encoding identifier id'>encoding</span><span class='assign token'>=</span><span class='ENCODING constant id'>ENCODING</span>  <span class='comment val'># Conv...</span>
-  <span class='myaso identifier id'>myaso</span> <span class='help identifier id'>help</span> <span class='lbrack token'>[</span><span class='TASK constant id'>TASK</span><span class='rbrack token'>]</span>                                              <span class='comment val'># Desc...</span>
-  <span class='myaso identifier id'>myaso</span> <span class='version identifier id'>version</span>                                                  <span class='comment val'># Prin...</span>
+  <span class='myaso identifier id'>myaso</span> <span class='convert identifier id'>convert</span> <span class='STORAGE_PATH constant id'>STORAGE_PATH</span> <span class='MORPHS constant id'>MORPHS</span> <span class='GRAMTAB constant id'>GRAMTAB</span> <span class='minus op'>-</span><span class='minus op'>-</span><span class='encoding identifier id'>encoding</span><span class='assign token'>=</span><span class='ENCODING constant id'>ENCODING</span>  <span class='comment val'># Conver...</span>
+  <span class='myaso identifier id'>myaso</span> <span class='help identifier id'>help</span> <span class='lbrack token'>[</span><span class='TASK constant id'>TASK</span><span class='rbrack token'>]</span>                                              <span class='comment val'># Descri...</span>
+  <span class='myaso identifier id'>myaso</span> <span class='irb identifier id'>irb</span>                                                      <span class='comment val'># Start ...</span>
+  <span class='myaso identifier id'>myaso</span> <span class='version identifier id'>version</span>                                                  <span class='comment val'># Print ...</span>
 <span class='string val'>% ./myaso </span><span class='minus op'>-</span><span class='v identifier id'>v</span>
 <span class='myaso identifier id'>myaso</span> <span class='version identifier id'>version</span> <span class='integer val'>0</span><span class='float val'>.0.1</span>
 </pre>
@@ -104,9 +115,10 @@ these dictonaries, just run myaso converter.</p>
 </ul>
 
 
-<p>So run myaso like this and enjoy the resulting <em>test.tch</em> hash:</p>
+<p>So run myaso like this and enjoy the resulting content of <code>ru</code>
+directory:</p>
 
-<pre class="code"><span class='myaso identifier id'>myaso</span> <span class='convert identifier id'>convert</span> <span class='string val'>'myaso.ru.sqlite3'</span> \
+<pre class="code"><span class='myaso identifier id'>myaso</span> <span class='convert identifier id'>convert</span> <span class='string val'>'ru/'</span> \
     <span class='string val'>'share/RusSrc/morphs.mrd'</span> \
     <span class='string val'>'share/rgramtab.tab'</span> \
     <span class='minus op'>-</span><span class='minus op'>-</span><span class='encoding identifier id'>encoding</span><span class='assign token'>=</span><span class='cp1251 identifier id'>cp1251</span>
@@ -130,7 +142,7 @@ future version unintentionally.</li>
 <p>Copyright (c) 2010 Dmitry A. Ustalov. See LICENSE for details.</p></div></div>
     
     <div id="footer">
-  Generated on Mon Sep 27 06:00:34 2010 by 
+  Generated on Mon Oct 25 07:52:05 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>

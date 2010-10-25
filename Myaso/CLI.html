@@ -131,6 +131,30 @@ Myaso Command-Line Interface based on the awesome Thor library.
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#irb-instance_method" title="#irb (instance method)">- (Object) <strong>irb</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+:nodoc:.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#version-instance_method" title="#version (instance method)">- (Object) <strong>version</strong> </a>
     
 
@@ -207,6 +231,48 @@ Myaso Command-Line Interface based on the awesome Thor library.
 </div>
     
       <div class="method_details ">
+  <p class="signature " id="irb-instance_method">
+  
+    - (<tt>Object</tt>) <strong>irb</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+:nodoc:
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/myaso/cli.rb', line 27</span>
+
+<span class='def def kw'>def</span> <span class='irb identifier id'>irb</span> 
+  <span class='require identifier id'>require</span> <span class='string val'>'myaso/core_ext/irb'</span>
+  <span class='IRB constant id'>IRB</span><span class='dot token'>.</span><span class='start_session identifier id'>start_session</span><span class='lparen token'>(</span><span class='binding identifier id'>binding</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <p class="signature " id="version-instance_method">
   
     - (<tt>Object</tt>) <strong>version</strong> 
@@ -238,7 +304,7 @@ Myaso Command-Line Interface based on the awesome Thor library.
       <pre class="code"><span class="info file"># File 'lib/myaso/cli.rb', line 22</span>
 
 <span class='def def kw'>def</span> <span class='version identifier id'>version</span> 
-  <span class='puts identifier id'>puts</span> <span class='lbrack token'>[</span> <span class='string val'>'myaso'</span><span class='comma token'>,</span> <span class='string val'>'version'</span><span class='comma token'>,</span> <span class='Myaso constant id'>Myaso</span><span class='dot token'>.</span><span class='version identifier id'>version</span> <span class='rbrack token'>]</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>' '</span><span class='rparen token'>)</span>
+  <span class='puts identifier id'>puts</span> <span class='lbrack token'>[</span> <span class='string val'>'myaso'</span><span class='comma token'>,</span> <span class='string val'>'version'</span><span class='comma token'>,</span> <span class='Myaso constant id'>Myaso</span><span class='colon2 op'>::</span><span class='Version constant id'>Version</span> <span class='rbrack token'>]</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>' '</span><span class='rparen token'>)</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -251,7 +317,7 @@ Myaso Command-Line Interface based on the awesome Thor library.
 </div>
     
     <div id="footer">
-  Generated on Mon Sep 27 06:00:35 2010 by 
+  Generated on Mon Oct 25 07:52:05 2010 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.1 (ruby-1.8.7).
 </div>
